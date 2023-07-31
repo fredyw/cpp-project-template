@@ -1,9 +1,14 @@
 FROM ubuntu
 
-RUN apt update && apt install -y \
-  build-essential \
-  cmake \
-  git
+ARG USERNAME=remotedev
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
 
-RUN groupadd --gid 1000 remotedev && \
-  useradd --uid 1000 --gid 1000 -m -s /bin/bash remotedev
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m -s /bin/bash $USERNAME \
+    && apt-get update \
+    && apt-get install -y sudo build-essential cmake git \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
+
+USER remotedev
