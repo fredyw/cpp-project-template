@@ -12,5 +12,13 @@
             "cwd": "${workspaceRoot}",
             "valuesFormatting": "parseText"
         },
+        {
+            "name": "Debug Test",
+            "type": "gdb",
+            "request": "launch",
+            "target": "./build/hello_test",
+            "cwd": "${workspaceRoot}",
+            "valuesFormatting": "parseText"
+        },
     ]
 }
