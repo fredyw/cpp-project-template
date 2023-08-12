@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build",
+            "command": "${workspaceFolder}/build.sh",
+            "group": "build",
+        },
+        {
+            "type": "shell",
+            "label": "Run",
+            "command": "${workspaceFolder}/build/cpp_project_template",
+            "dependsOn": "Build",
+        },
+        {
+            "type": "shell",
+            "label": "Test",
+            "command": "${workspaceFolder}/build/hello_test",
+            "group": "test",
+            "dependsOn": "Build",
+        },
+        {
+            "type": "shell",
+            "label": "Clean",
+            "command": "rm -rf ${workspaceFolder}/build",
+        },
+    ]
+
+}
