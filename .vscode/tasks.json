@@ -10,7 +10,7 @@
         {
             "type": "shell",
             "label": "Run",
-            "command": "${workspaceFolder}/build/cpp_project_template",
+            "command": "${workspaceFolder}/build/main",
             "dependsOn": "Build",
         },
         {
