@@ -8,15 +8,7 @@
             "name": "Debug",
             "type": "gdb",
             "request": "launch",
-            "target": "./build/main",
-            "cwd": "${workspaceRoot}",
-            "valuesFormatting": "parseText"
-        },
-        {
-            "name": "Debug Test",
-            "type": "gdb",
-            "request": "launch",
-            "target": "./build/hello_test",
+            "target": "./build/${fileBasenameNoExtension}",
             "cwd": "${workspaceRoot}",
             "valuesFormatting": "parseText"
         },
