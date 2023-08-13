@@ -4,3 +4,6 @@ build/
 
 # CLion
 .idea/
+
+# Clangd
+.cache/
