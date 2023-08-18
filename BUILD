@@ -12,7 +12,7 @@ cc_test(
     srcs = ["hello_test.cpp"],
     deps = [
         ":hello",
-        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
 )
 
