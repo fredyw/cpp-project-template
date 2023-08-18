@@ -1,0 +1,7 @@
+module(
+    name = "cpp_project_template",
+    version = "0.0.1",
+)
+
+bazel_dep(name = "abseil-cpp", version = "20230125.1")
+bazel_dep(name = "googletest", version = "1.14.0")

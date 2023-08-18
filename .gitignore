@@ -8,3 +8,6 @@ compile_commands.json
 
 # Clangd
 .cache/
+
+# Bazel
+bazel-*
