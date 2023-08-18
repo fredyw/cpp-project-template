@@ -6,5 +6,9 @@ A simple C++ project template with [Abseil](https://abseil.io/) and
 ## How to Build
 
 ```
-./build.sh
+./cmake_build.sh
+```
+or
+```
+./bazel_build.sh
 ```

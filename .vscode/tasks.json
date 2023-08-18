@@ -3,28 +3,49 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Build",
-            "command": "${workspaceFolder}/build.sh",
+            "label": "CMake Build",
+            "command": "${workspaceFolder}/cmake_build.sh",
             "group": "build",
         },
         {
             "type": "shell",
-            "label": "Run",
+            "label": "CMake Run",
             "command": "${workspaceFolder}/build/main",
-            "dependsOn": "Build",
+            "dependsOn": "CMake Build",
         },
         {
             "type": "shell",
-            "label": "Test",
+            "label": "CMake Test",
             "command": "${workspaceFolder}/build/hello_test",
             "group": "test",
             "dependsOn": "Build",
         },
         {
             "type": "shell",
-            "label": "Clean",
+            "label": "CMake Clean",
             "command": "rm -rf ${workspaceFolder}/build",
         },
+        {
+            "type": "shell",
+            "label": "Bazel Build",
+            "command": "bazel build //:hello",
+            "group": "build",
+        },
+        {
+            "type": "shell",
+            "label": "Bazel Run",
+            "command": "bazel run //:main",
+        },
+        {
+            "type": "shell",
+            "label": "Bazel Test",
+            "command": "bazel test //:hello_test",
+            "group": "test",
+        },
+        {
+            "type": "shell",
+            "label": "Bazel Clean",
+            "command": "bazel clean",
+        },
     ]
-
 }
