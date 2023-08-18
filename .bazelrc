@@ -1,2 +1,1 @@
-build
 build --enable_bzlmod --cxxopt='-std=c++17'
