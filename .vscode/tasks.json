@@ -16,9 +16,12 @@
         {
             "type": "shell",
             "label": "CMake Test",
-            "command": "${workspaceFolder}/build/hello_test",
+            "command": "ctest",
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
             "group": "test",
-            "dependsOn": "Build",
+            "dependsOn": "CMake Build",
         },
         {
             "type": "shell",
