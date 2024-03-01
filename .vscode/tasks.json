@@ -31,18 +31,18 @@
         {
             "type": "shell",
             "label": "Bazel Build",
-            "command": "bazel build //:hello",
+            "command": "bazel build //src:hello",
             "group": "build",
         },
         {
             "type": "shell",
             "label": "Bazel Run",
-            "command": "bazel run //:main",
+            "command": "bazel run //src:main",
         },
         {
             "type": "shell",
             "label": "Bazel Test",
-            "command": "bazel test //:hello_test",
+            "command": "bazel test //src:hello_test",
             "group": "test",
         },
         {
