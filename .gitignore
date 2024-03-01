@@ -5,7 +5,8 @@ compile_commands.json
 
 # CLion
 .idea/
-.clwb/
+.clwb/.blaze
+.clwb/.idea
 
 # Clangd
 .cache/
