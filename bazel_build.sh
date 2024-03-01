@@ -2,4 +2,4 @@
 
 set -e
 
-bazel build //:all
+bazel build //src:all

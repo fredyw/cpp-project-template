@@ -5,10 +5,36 @@ A simple C++ project template with [Abseil](https://abseil.io/) and
 
 ## How to Build
 
+**CMake**
 ```
 ./cmake_build.sh
 ```
-or
+
+**Bazel**
 ```
 ./bazel_build.sh
+```
+
+## How to Run
+
+**CMake**
+```
+./cmake_run.sh
+```
+
+**Bazel**
+```
+./bazel_run.sh
+```
+
+## How to Test
+
+**CMake**
+```
+./cmake_test.sh
+```
+
+**Bazel**
+```
+./bazel_test.sh
 ```
